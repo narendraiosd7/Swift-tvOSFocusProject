@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13122.16" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="16097" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swift_tvOSFocusProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,12 +18,93 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdJ-YK-hPi">
+                                <rect key="frame" x="460" y="150" width="280" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="A"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vF-9B-9d7">
+                                <rect key="frame" x="820" y="150" width="280" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="B1i-wA-lx9"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="B"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DF1-Qv-eV4">
+                                <rect key="frame" x="1180" y="150" width="280" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="C"/>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="B1j-Ju-YyQ">
+                                <rect key="frame" x="460" y="336" width="1000" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YFa-KH-0oM">
+                                <rect key="frame" x="575" y="505" width="770" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="3km-19-6UZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please check your text very carefully" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aZ-zz-nYY">
+                                <rect key="frame" x="657" y="665" width="606" height="46"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4R-EU-RQW">
+                                <rect key="frame" x="1645" y="919" width="200" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="AX0-to-B6t"/>
+                                    <constraint firstAttribute="height" constant="86" id="Uoi-4R-FhH"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="showAlert:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="o3v-Lt-9No"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YFa-KH-0oM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="78l-TS-ntj"/>
+                            <constraint firstItem="DF1-Qv-eV4" firstAttribute="leading" secondItem="7vF-9B-9d7" secondAttribute="trailing" constant="80" id="A2T-Xd-aSP"/>
+                            <constraint firstAttribute="bottom" secondItem="E4R-EU-RQW" secondAttribute="bottom" constant="75" id="Das-ot-Ydn"/>
+                            <constraint firstItem="9aZ-zz-nYY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Eht-Tx-dk9"/>
+                            <constraint firstItem="NdJ-YK-hPi" firstAttribute="width" secondItem="7vF-9B-9d7" secondAttribute="width" id="HvT-bZ-udW"/>
+                            <constraint firstItem="9aZ-zz-nYY" firstAttribute="top" secondItem="YFa-KH-0oM" secondAttribute="bottom" constant="100" id="I2v-9d-5ej"/>
+                            <constraint firstItem="B1j-Ju-YyQ" firstAttribute="leading" secondItem="NdJ-YK-hPi" secondAttribute="leading" id="M28-bu-naL"/>
+                            <constraint firstItem="DF1-Qv-eV4" firstAttribute="width" secondItem="7vF-9B-9d7" secondAttribute="width" id="MF7-OP-IN4"/>
+                            <constraint firstItem="B1j-Ju-YyQ" firstAttribute="top" secondItem="NdJ-YK-hPi" secondAttribute="bottom" constant="100" id="N7i-pb-KHW"/>
+                            <constraint firstItem="7vF-9B-9d7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="150" id="QCu-JT-zF1"/>
+                            <constraint firstItem="NdJ-YK-hPi" firstAttribute="centerY" secondItem="7vF-9B-9d7" secondAttribute="centerY" id="QEl-RM-4Gr"/>
+                            <constraint firstItem="B1j-Ju-YyQ" firstAttribute="trailing" secondItem="DF1-Qv-eV4" secondAttribute="trailing" id="TkA-90-oi1"/>
+                            <constraint firstItem="7vF-9B-9d7" firstAttribute="leading" secondItem="NdJ-YK-hPi" secondAttribute="trailing" constant="80" id="Uq3-sS-r91"/>
+                            <constraint firstItem="DF1-Qv-eV4" firstAttribute="centerY" secondItem="7vF-9B-9d7" secondAttribute="centerY" id="fAM-C2-TYu"/>
+                            <constraint firstAttribute="trailing" secondItem="E4R-EU-RQW" secondAttribute="trailing" constant="75" id="hN1-8d-0L5"/>
+                            <constraint firstAttribute="trailing" secondItem="YFa-KH-0oM" secondAttribute="trailing" constant="575" id="n05-IZ-9hg"/>
+                            <constraint firstItem="7vF-9B-9d7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qMQ-h8-QzY"/>
+                            <constraint firstItem="YFa-KH-0oM" firstAttribute="top" secondItem="B1j-Ju-YyQ" secondAttribute="bottom" constant="100" id="tP8-Py-3ds"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="E4R-EU-RQW" id="Dhw-sg-EZP"/>
+                        <outlet property="textField" destination="YFa-KH-0oM" id="v6i-C2-Izx"/>
+                        <outlet property="textLabel" destination="9aZ-zz-nYY" id="Guk-Wd-Bph"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="69" y="69"/>
         </scene>
     </scenes>
 </document>
